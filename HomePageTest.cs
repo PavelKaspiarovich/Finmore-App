@@ -234,6 +234,13 @@ var fullName = faker.Name.FullName();
             );      
     registerButton.Click();
 
+    wait.Until(d=>d.Url.Contains("https://finmore.netlify.app/"));
+
+    Assert.That(driver.Url,Does.Contain("https://finmore.netlify.app/"),
+    "User was not redirected"
+
+    );
+
 
 
 }
