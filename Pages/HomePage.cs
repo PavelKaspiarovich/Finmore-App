@@ -10,7 +10,7 @@ public class HomePage : BasePage
     public HomePage(IWebDriver driver) : base(driver)  // инициализировали конструктор
     {} 
 
-    public void OpenHomePage()
+    public void OpenHomePage()   
         {
             Driver.Navigate().GoToUrl("https://finmore.netlify.app/");
         }
@@ -30,10 +30,6 @@ public class HomePage : BasePage
         {
             return GetText(RegisterButton);
         }    
-
-
-
-
     
 }
 

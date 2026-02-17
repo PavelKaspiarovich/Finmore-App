@@ -7,9 +7,9 @@ namespace FinmoreApp.Pages
 {
     public class BasePage
     {
-        protected IWebDriver Driver = null!;
+        protected IWebDriver Driver {get;}
 
-        protected WebDriverWait Wait = null!;
+        protected WebDriverWait Wait {get;}
 
         protected BasePage(IWebDriver driver)
         {
