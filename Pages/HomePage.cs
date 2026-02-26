@@ -1,11 +1,11 @@
 using FinmoreApp.Pages;
 using OpenQA.Selenium;
 
-namespace FinmoreApp.HomePage{
+namespace FinmoreApp.Pages{
 
 public class HomePage : BasePage
 {
-    private readonly By RegisterButton = By.CssSelector("[data-testid='register-submit-button']");
+    private readonly By RegisterButton = By.CssSelector("[data-testid='switch-to-register-button']");
 
     public HomePage(IWebDriver driver) : base(driver)  // инициализировали конструктор
     {} 
@@ -14,6 +14,18 @@ public class HomePage : BasePage
         {
             Driver.Navigate().GoToUrl("https://finmore.netlify.app/");
         }
+
+    public string GetHomePageUrl()
+        {
+            return Driver.Url;
+        }
+
+    public string GetHomePageTitle()
+        {
+            return Driver.Title;
+        }
+
+        // create 2 metods: check that I open site, check title
 
     public void ClickRegisterButton()
         {
