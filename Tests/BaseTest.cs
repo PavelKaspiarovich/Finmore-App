@@ -17,6 +17,7 @@ namespace FinmoreApp.Tests
             Driver = new ChromeDriver();
             Driver.Manage().Window.Maximize();
             HomePage = new HomePage(Driver);
+            HomePage.OpenHomePage();
         }
  
         [TearDown]

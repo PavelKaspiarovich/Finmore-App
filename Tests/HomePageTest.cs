@@ -9,15 +9,9 @@ namespace FinmoreApp.Tests
     public class HomePageTest : BaseTest
     {
 
-        private void OpenHomePageMethods() // why this method is in HomePageTests but not in HomePage.cs??
-        {
-          HomePage.OpenHomePage();   
-
-        }
-
         [Test]
         public void CheckTitleAndURL(){
-            OpenHomePageMethods();
+            
 
             Assert.Multiple(()=>
             {
@@ -33,14 +27,14 @@ namespace FinmoreApp.Tests
         [Test]
         public void RegisterButtonIsDisplayed()
         {
-             OpenHomePageMethods();           
+                     
              Assert.Multiple(() =>
             {
                 Assert.That(HomePage.RegisterButtonVisible(),
                     Is.True, "Register button is not visible");
  
                 Assert.That(HomePage.GetRegisterButtonText(),
-                    Is.EqualTo("Register"),                   
+                    Is.EqualTo("Зареєструватися"),                   
                     "Register button text is incorrect");
             });
 
@@ -50,12 +44,14 @@ namespace FinmoreApp.Tests
         [Test]
         public void RegisterPageIsDisplayedIfClickRegisterButton()
         {
-            OpenHomePageMethods();
+         
             HomePage.ClickRegisterButton();
             var registrationPage = new RegistrationPage(Driver);
             Assert.That(
                 registrationPage.IsRegisterFormVisible(),Is.True,
                 "Registration form is absent"
+              
+            
             );        
            
         }

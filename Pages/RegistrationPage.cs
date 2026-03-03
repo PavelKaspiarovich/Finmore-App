@@ -60,9 +60,32 @@ namespace FinmoreApp.Pages
         {
             Click(SubmitButton);
         }
+        public void RegisterUser(
+            string fullName,
+            string email,
+            string password,
+            string confirmPassword,
+            string currencyValue)
+        {
+            EnterFullName(fullName);
+            EnterEmail(email);
+            EnterPassword(password);
+            EnterConfirmPassword(confirmPassword);
+            SelectCurrency(currencyValue);
+            ClickSubmitButton();
+        }
 
+        internal void RegisterUser(string v1, Func<string> randomEmail, string v2, string v3, string v4)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+        
+        
+        
     }
    
-}
+
 
 
